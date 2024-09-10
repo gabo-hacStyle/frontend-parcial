@@ -33,7 +33,23 @@ const toggleDarkMode = () => {
 };
 
 //Scritpts de modal
-const openModal = () => {
-    const modal = document.getElementById('modal');
-    modal.style.display = 'block';
+const openModal = (text) => {
+    alert(text)
 };
+
+//Script de formulario de login
+let contador = 0;
+const userReal = 'gabo';
+const passwordReal = '1234'
+
+const  submitLogin = () => {
+    const user = document.getElementById('nameLogin').value;
+    const password = document.getElementById('exampleInputPassword1').value
+
+    if(userReal ===  user && passwordReal === password){
+        contador = contador +1;
+        console.log('Curso agregado correctamente')
+    } else {
+        console.log('credenciales invalidas')
+    }
+}
